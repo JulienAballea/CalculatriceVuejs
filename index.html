@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="assets/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+
+    <div id="app">
+      <div class="calculator">
+        <!-- Add screen component with props  -->
+        <screen-component
+        :result="result"
+        :calcul="calcul"
+        > </screen-component>
+
+        <!-- Add keyboard component with emit  -->
+        <keyboard-component
+        @clear="clear"
+        @del="del"
+        @number="number"
+        @operation="operation"
+        @equal="equal"
+        @signe="signe"
+        @dot="dot"
+        ></keyboard-component>
+
+      </div>
+        <!-- Add history component with emit and props  -->
+        <history-component
+        :history="history"
+        @getcalcul="getcalcul"
+        > </history-component>
+
+
+    </div>
+
+    <!-- Import App And components -->
+    <script src="main.js"></script>
+    <script src="./components/screenComponent.js"></script>
+    <script src="./components/keyboardComponent.js"></script>
+    <script src="./components/historyComponent.js"></script>
+    <!-- Mount App -->
+    <script>
+    const mountedApp = app.mount('#app')
+    </script>
+
+  </body>
+</html>

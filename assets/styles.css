@@ -1,0 +1,113 @@
+body{
+  display:flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background-color: #0B62DE;
+}
+#app{
+  font-family: "Gill Sans", sans-serif;
+  display:flex;
+  width: 750px;
+  color: #ffffff;
+  padding-top:50px;
+
+}
+
+.calculator{
+  width:400px;
+  height:600px;
+  display:flex;
+  flex-direction: column;
+  background-color: #191b1d;
+  border-radius:8px;
+}
+
+.screen{
+  width:400px;
+  height:150px;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.screen span{
+  padding-right: 20px;
+}
+
+.screen .result{
+  font-size:30px;
+  color:#0B62DE;
+}
+
+.screen .calcul{
+  font-size:18px;
+  min-height: 15px;
+}
+
+.keyboard{
+  width:400px;
+  height:450px;
+  display:flex;
+  flex-wrap: wrap;
+
+}
+
+.keyboard .key{
+  border: 1px solid #191b1d;
+  width:98px;
+  height:98px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#1e2022;
+  font-size:30px;
+  cursor:pointer;
+}
+.keyboard .key:active{
+  background-color: #0B62DE;
+}
+
+.keyboard .equal{
+  width:198px;
+  font-size:40px;
+  color:#0B62DE;
+  border-bottom-right-radius: 8px;
+}
+.keyboard .zero{
+  border-bottom-left-radius: 8px;
+}
+
+
+.history{
+background-color:#191b1d;
+width: 350px ;
+height:474px;
+display:flex;
+flex-direction: column;
+align-items: center;
+padding-top:10px;
+padding-bottom:10px;
+padding-right:10px;
+margin-top:150px;
+border-top-right-radius: 6px;
+border-bottom-right-radius: 6px;
+}
+
+.history .calcul{
+  border-radius:5px;
+  width: 318px;
+  background-color:#1e2022;
+  border: 1px solid #191b1d;
+  padding:10px;
+  font-size:18px;
+  height:26px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  cursor:pointer;
+}
+.history .calcul:active{
+  background-color:#0B62DE;
+}
